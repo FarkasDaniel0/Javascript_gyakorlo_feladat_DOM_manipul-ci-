@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gomb szín váltása</title>
+    
+        <style>
+            button {
+  display:block;
+  margin:auto;
+  height:50px;
+  width:95%;
+  text-shadow:1px 1px 0.5px #000;
+  border:solid 1px #000;
+  font-size:20px;
+  color:#ccc;
+  cursor:pointer;
+  margin-top: 20%;
+}
+        </style>
+</head>
+<body>
+ 
+    <button>Szín váltása </button>
+
+    <a href="index.html">
+      <button>Főoldal</button></a>
+    <script>
+        let button = document.getElementsByTagName('button')[0];
+ 
+ function RBC (e) {
+   button.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+ }
+ 
+ button.addEventListener("click", RBC);
+ window.onload = RBC();
+ 
+         </script>
+
+</body>
+</html>
